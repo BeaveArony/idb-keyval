@@ -31,20 +31,20 @@ function getDefaultStore() {
   return store;
 }
 
-export function get<Type>(key: IDBValidKey, store = getDefaultStore()): Promise<Type> {
+export function getItem<Type>(key: IDBValidKey, store = getDefaultStore()): Promise<Type> {
   let req: IDBRequest;
   return store._withIDBStore('readonly', store => {
     req = store.get(key);
   }).then(() => req.result);
 }
 
-export function set(key: IDBValidKey, value: any, store = getDefaultStore()): Promise<void> {
+export function setItem(key: IDBValidKey, value: any, store = getDefaultStore()): Promise<void> {
   return store._withIDBStore('readwrite', store => {
     store.put(value, key);
   });
 }
 
-export function del(key: IDBValidKey, store = getDefaultStore()): Promise<void> {
+export function removeItem(key: IDBValidKey, store = getDefaultStore()): Promise<void> {
   return store._withIDBStore('readwrite', store => {
     store.delete(key);
   });

@@ -1,7 +1,7 @@
 {
-    "name": "idb-keyval",
-    "version": "3.0.2",
-    "description": "A super-simple-small keyval store built on top of IndexedDB",
+    "name": "localstorage-idb-keyval",
+    "version": "1.0.0",
+    "description": "A super-simple-small keyval store built on top of IndexedDB with localStorage API",
     "main": "./dist/idb-keyval-cjs.js",
     "module": "./dist/idb-keyval.mjs",
     "types": "./dist/idb-keyval.d.ts",
@@ -10,7 +10,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jakearchibald/idb-keyval.git"
+        "url": "git+https://github.com/BeaveArony/localstorage-idb-keyval.git"
     },
     "keywords": [
         "idb",
@@ -19,17 +19,20 @@
         "keyval",
         "localstorage",
         "storage",
-        "promise"
+        "promise",
+        "localStorage",
+        "API"
     ],
     "author": "Jake Archibald",
     "contributors": [
-        "Benny Powers"
+        "Benny Powers",
+        "Michael Gustmann"
     ],
     "license": "Apache-2.0",
     "bugs": {
-        "url": "https://github.com/jakearchibald/idb-keyval/issues"
+        "url": "https://github.com/BeaveArony/localstorage-idb-keyval/issues"
     },
-    "homepage": "https://github.com/jakearchibald/idb-keyval#readme",
+    "homepage": "https://github.com/BeaveArony/localstorage-idb-keyval#readme",
     "devDependencies": {
         "del-cli": "^1.1.0",
         "rollup": "^0.56.5",

@@ -26,18 +26,18 @@ function getDefaultStore() {
         store = new Store();
     return store;
 }
-function get(key, store = getDefaultStore()) {
+function getItem(key, store = getDefaultStore()) {
     let req;
     return store._withIDBStore('readonly', store => {
         req = store.get(key);
     }).then(() => req.result);
 }
-function set(key, value, store = getDefaultStore()) {
+function setItem(key, value, store = getDefaultStore()) {
     return store._withIDBStore('readwrite', store => {
         store.put(value, key);
     });
 }
-function del(key, store = getDefaultStore()) {
+function removeItem(key, store = getDefaultStore()) {
     return store._withIDBStore('readwrite', store => {
         store.delete(key);
     });
@@ -61,4 +61,4 @@ function keys(store = getDefaultStore()) {
     }).then(() => keys);
 }
 
-export { Store, get, set, del, clear, keys };
+export { Store, getItem, setItem, removeItem, clear, keys };
