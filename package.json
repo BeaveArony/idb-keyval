@@ -1,12 +1,11 @@
 {
     "name": "localstorage-idb-keyval",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "A super-simple-small keyval store built on top of IndexedDB with localStorage API",
-    "main": "./dist/idb-keyval-cjs.js",
-    "module": "./dist/idb-keyval.mjs",
-    "types": "./dist/idb-keyval.d.ts",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
     "scripts": {
-        "build": "del dist && rollup -c && uglifyjs --compress --mangle -o dist/idb-keyval-iife.min.js dist/idb-keyval-iife.js"
+        "build": "del dist && tsc"
     },
     "repository": {
         "type": "git",
@@ -35,9 +34,6 @@
     "homepage": "https://github.com/BeaveArony/localstorage-idb-keyval#readme",
     "devDependencies": {
         "del-cli": "^1.1.0",
-        "rollup": "^0.56.5",
-        "rollup-plugin-typescript2": "^0.12.0",
-        "typescript": "^2.7.2",
-        "uglify-es": "^3.3.9"
+        "typescript": "^2.8.1"
     }
 }
